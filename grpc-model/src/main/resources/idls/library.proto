@@ -1,0 +1,27 @@
+syntax = "proto3";
+package example;
+option java_package = "com.example.grpc.service";
+option java_multiple_files = true;
+
+service LibraryService {
+	rpc getBook(BookRequest) returns (BookResponse);
+	
+	rpc addBook(Book) returns (BookResponse);
+	
+	rpc listBook(Book) returns (stream BookResponse);
+}
+
+
+message BookRequest{
+	int32 id = 1;
+}
+
+message BookResponse{
+	int32 id = 1;
+	Book book = 2;
+}
+
+message Book{
+	string name = 1;
+	double price = 2;
+}
