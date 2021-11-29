@@ -35,6 +35,8 @@ public class LibraryClient {
 				.build());
 		LOG.info("added book id : "+bookResponse.getId()+ " name:"+bookResponse.getBook().getName());
 		
+		channel.shutdownNow();
+		
 	}
 
 }
