@@ -12,7 +12,7 @@ public final class LibraryServiceGrpc {
 
   private LibraryServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "example.LibraryService";
+  public static final String SERVICE_NAME = "com.example.grpc.service.LibraryService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.example.grpc.service.BookRequest,
@@ -77,29 +77,29 @@ public final class LibraryServiceGrpc {
     return getAddBookMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.example.grpc.service.Book,
-      com.example.grpc.service.BookResponse> getListBookMethod;
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.example.grpc.service.BookListResponse> getListBookMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "listBook",
-      requestType = com.example.grpc.service.Book.class,
-      responseType = com.example.grpc.service.BookResponse.class,
+      requestType = com.google.protobuf.Empty.class,
+      responseType = com.example.grpc.service.BookListResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<com.example.grpc.service.Book,
-      com.example.grpc.service.BookResponse> getListBookMethod() {
-    io.grpc.MethodDescriptor<com.example.grpc.service.Book, com.example.grpc.service.BookResponse> getListBookMethod;
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.example.grpc.service.BookListResponse> getListBookMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.example.grpc.service.BookListResponse> getListBookMethod;
     if ((getListBookMethod = LibraryServiceGrpc.getListBookMethod) == null) {
       synchronized (LibraryServiceGrpc.class) {
         if ((getListBookMethod = LibraryServiceGrpc.getListBookMethod) == null) {
           LibraryServiceGrpc.getListBookMethod = getListBookMethod =
-              io.grpc.MethodDescriptor.<com.example.grpc.service.Book, com.example.grpc.service.BookResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.example.grpc.service.BookListResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listBook"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.example.grpc.service.Book.getDefaultInstance()))
+                  com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.example.grpc.service.BookResponse.getDefaultInstance()))
+                  com.example.grpc.service.BookListResponse.getDefaultInstance()))
               .setSchemaDescriptor(new LibraryServiceMethodDescriptorSupplier("listBook"))
               .build();
         }
@@ -172,8 +172,8 @@ public final class LibraryServiceGrpc {
 
     /**
      */
-    public void listBook(com.example.grpc.service.Book request,
-        io.grpc.stub.StreamObserver<com.example.grpc.service.BookResponse> responseObserver) {
+    public void listBook(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.example.grpc.service.BookListResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBookMethod(), responseObserver);
     }
 
@@ -197,8 +197,8 @@ public final class LibraryServiceGrpc {
             getListBookMethod(),
             io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
-                com.example.grpc.service.Book,
-                com.example.grpc.service.BookResponse>(
+                com.google.protobuf.Empty,
+                com.example.grpc.service.BookListResponse>(
                   this, METHODID_LIST_BOOK)))
           .build();
     }
@@ -236,8 +236,8 @@ public final class LibraryServiceGrpc {
 
     /**
      */
-    public void listBook(com.example.grpc.service.Book request,
-        io.grpc.stub.StreamObserver<com.example.grpc.service.BookResponse> responseObserver) {
+    public void listBook(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.example.grpc.service.BookListResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListBookMethod(), getCallOptions()), request, responseObserver);
     }
@@ -273,8 +273,8 @@ public final class LibraryServiceGrpc {
 
     /**
      */
-    public java.util.Iterator<com.example.grpc.service.BookResponse> listBook(
-        com.example.grpc.service.Book request) {
+    public java.util.Iterator<com.example.grpc.service.BookListResponse> listBook(
+        com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListBookMethod(), getCallOptions(), request);
     }
@@ -341,8 +341,8 @@ public final class LibraryServiceGrpc {
               (io.grpc.stub.StreamObserver<com.example.grpc.service.BookResponse>) responseObserver);
           break;
         case METHODID_LIST_BOOK:
-          serviceImpl.listBook((com.example.grpc.service.Book) request,
-              (io.grpc.stub.StreamObserver<com.example.grpc.service.BookResponse>) responseObserver);
+          serviceImpl.listBook((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<com.example.grpc.service.BookListResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();

@@ -4,7 +4,7 @@
 package com.example.grpc.service;
 
 public interface BookOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:example.Book)
+    // @@protoc_insertion_point(interface_extends:com.example.grpc.service.Book)
     com.google.protobuf.MessageOrBuilder {
 
   /**

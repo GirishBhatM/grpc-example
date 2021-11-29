@@ -4,11 +4,11 @@
 package com.example.grpc.service;
 
 /**
- * Protobuf type {@code example.Book}
+ * Protobuf type {@code com.example.grpc.service.Book}
  */
 public  final class Book extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:example.Book)
+    // @@protoc_insertion_point(message_implements:com.example.grpc.service.Book)
     BookOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Book.newBuilder() to construct.
@@ -81,13 +81,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.example.grpc.service.Library.internal_static_example_Book_descriptor;
+    return com.example.grpc.service.Library.internal_static_com_example_grpc_service_Book_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.example.grpc.service.Library.internal_static_example_Book_fieldAccessorTable
+    return com.example.grpc.service.Library.internal_static_com_example_grpc_service_Book_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.example.grpc.service.Book.class, com.example.grpc.service.Book.Builder.class);
   }
@@ -306,21 +306,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code example.Book}
+   * Protobuf type {@code com.example.grpc.service.Book}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:example.Book)
+      // @@protoc_insertion_point(builder_implements:com.example.grpc.service.Book)
       com.example.grpc.service.BookOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.example.grpc.service.Library.internal_static_example_Book_descriptor;
+      return com.example.grpc.service.Library.internal_static_com_example_grpc_service_Book_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.grpc.service.Library.internal_static_example_Book_fieldAccessorTable
+      return com.example.grpc.service.Library.internal_static_com_example_grpc_service_Book_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.example.grpc.service.Book.class, com.example.grpc.service.Book.Builder.class);
     }
@@ -353,7 +353,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.example.grpc.service.Library.internal_static_example_Book_descriptor;
+      return com.example.grpc.service.Library.internal_static_com_example_grpc_service_Book_descriptor;
     }
 
     @java.lang.Override
@@ -577,10 +577,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:example.Book)
+    // @@protoc_insertion_point(builder_scope:com.example.grpc.service.Book)
   }
 
-  // @@protoc_insertion_point(class_scope:example.Book)
+  // @@protoc_insertion_point(class_scope:com.example.grpc.service.Book)
   private static final com.example.grpc.service.Book DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.example.grpc.service.Book();
